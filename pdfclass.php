@@ -229,7 +229,7 @@ class PDFViewer {
 
             // Create images.
             exec(select_ghostscript() . " -dSAFER"
-                    . " -sDEVICE=jpeg -dJPEGQ=75 -r" . $this->page_resolution
+                    . " -sDEVICE=png16m -r" . $this->page_resolution
                     . " -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dDOINTERPOLATE"
                     . " -dFirstPage=$page -dLastPage=" . $page
                     . " -o " . escapeshellarg($image_full_path)
